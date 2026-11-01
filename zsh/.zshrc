@@ -39,4 +39,5 @@ elif [ -f "${0:A:h}/aliases.zsh" ]; then
 fi
 
 # PATH additions
+typeset -U PATH path
 export PATH="${HOME}/.local/bin:${HOME}/bin:/usr/local/bin:${PATH}"
