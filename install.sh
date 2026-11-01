@@ -14,7 +14,7 @@ echo " Installing dotfiles from: ${DOTFILES_DIR}"
 echo "======================================================"
 
 mkdir -p "${CONFIG_DIR}"
-mkdir -p "${CONFIG_DIR}/starship"
+mkdir -p "${CONFIG_DIR}/git"
 
 link_file() {
     local src="$1"
@@ -35,15 +35,22 @@ link_file() {
 link_file "${DOTFILES_DIR}/zsh/.zshrc" "${HOME}/.zshrc"
 
 # 2. Git
-link_file "${DOTFILES_DIR}/git/.gitconfig" "${HOME}/.gitconfig"
-link_file "${DOTFILES_DIR}/git/.gitignore_global" "${HOME}/.gitignore_global"
-git config --global core.excludesfile "${HOME}/.gitignore_global" || true
+link_file "${DOTFILES_DIR}/git/.gitconfig" "${CONFIG_DIR}/git/config"
+link_file "${DOTFILES_DIR}/git/.gitignore_global" "${CONFIG_DIR}/git/ignore"
 
 # 3. Starship Prompt
 link_file "${DOTFILES_DIR}/starship/starship.toml" "${CONFIG_DIR}/starship.toml"
 
 # 4. Tmux
 link_file "${DOTFILES_DIR}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+
+# Ensure ~/.gitconfig exists as a regular file (not symlink) to capture global writes
+if [ -L "${HOME}/.gitconfig" ]; then
+    rm -f "${HOME}/.gitconfig"
+fi
+if [ ! -f "${HOME}/.gitconfig" ]; then
+    touch "${HOME}/.gitconfig"
+fi
 
 echo "======================================================"
 echo " ✓ Dotfiles installation complete!"

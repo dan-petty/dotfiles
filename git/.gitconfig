@@ -1,25 +1,12 @@
 [user]
-    name = Daniel Petty
-    email = contact@danielpetty.com
+    name = Dotfiles User
+    email = user@example.com
 
-[init]
-    defaultBranch = main
+[core]
+    excludesfile = ~/.config/git/ignore
 
 [pull]
     rebase = true
 
-[push]
-    autoSetupRemote = true
-
-[core]
-    autocrlf = input
-    editor = vim
-
-[alias]
-    st = status -sb
-    co = checkout
-    br = branch
-    ci = commit
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    unstage = reset HEAD --
-    last = log -1 HEAD
+[init]
+    defaultBranch = main
