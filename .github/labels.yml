@@ -93,3 +93,92 @@
 - name: "budget/borrowed"
   color: "B60205"
   description: "Agent opening beyond the quota allowance; counts as debt until closed"
+
+# ── Scope labels: each is a scope that the PR title check accepts ─────────────
+- name: "scope/ai"
+  color: "DCDCD6"
+  description: "The area ai of this repository"
+
+- name: "scope/ci"
+  color: "DCDCD6"
+  description: "GitHub Actions workflows and pre-commit hooks"
+
+- name: "scope/cli"
+  color: "DCDCD6"
+  description: "The area cli of this repository"
+
+- name: "scope/config"
+  color: "DCDCD6"
+  description: "The area config of this repository"
+
+- name: "scope/deps"
+  color: "DCDCD6"
+  description: "Dependency pins and the updates of Renovate"
+
+- name: "scope/docs"
+  color: "DCDCD6"
+  description: "README and other documents"
+
+- name: "scope/git"
+  color: "DCDCD6"
+  description: "Git settings in git/"
+
+- name: "scope/github"
+  color: "DCDCD6"
+  description: "GitHub repository settings and GitHub integrations"
+
+- name: "scope/infra"
+  color: "DCDCD6"
+  description: "The area infra of this repository"
+
+- name: "scope/install"
+  color: "DCDCD6"
+  description: "The install script install.sh"
+
+- name: "scope/k8s"
+  color: "DCDCD6"
+  description: "The area k8s of this repository"
+
+- name: "scope/mcp"
+  color: "DCDCD6"
+  description: "The area mcp of this repository"
+
+- name: "scope/readme"
+  color: "DCDCD6"
+  description: "The README and the setup steps that it lists"
+
+- name: "scope/release"
+  color: "DCDCD6"
+  description: "The area release of this repository"
+
+- name: "scope/review"
+  color: "DCDCD6"
+  description: "The area review of this repository"
+
+- name: "scope/roadmap"
+  color: "DCDCD6"
+  description: "The roadmap jobs and their settings"
+
+- name: "scope/security"
+  color: "DCDCD6"
+  description: "Security controls and findings"
+
+- name: "scope/spec"
+  color: "DCDCD6"
+  description: "OpenSpec changes and specs, such as a plan pull request"
+
+- name: "scope/starship"
+  color: "DCDCD6"
+  description: "Starship prompt settings in starship/"
+
+- name: "scope/telemetry"
+  color: "DCDCD6"
+  description: "The area telemetry of this repository"
+
+- name: "scope/tmux"
+  color: "DCDCD6"
+  description: "tmux settings in tmux/"
+
+- name: "scope/zsh"
+  color: "DCDCD6"
+  description: "Zsh settings in zsh/"
