@@ -1,17 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Renovate opens the dependency update pull requests of dotfiles using the shared preset github>dan-petty/infra//renovate/base, with labels and commit prefixes matching .github/labels.yml.",
+  "description": "Renovate opens the dependency update pull requests of dotfiles using the shared preset github>dan-petty/infra//renovate/base, which gives the labels and the commit prefixes, such as chore(deps).",
   "extends": [
     "github>dan-petty/infra//renovate/base"
-  ],
-  "labels": ["type/chore"],
-  "commitMessagePrefix": "chore:",
-  "dependencyDashboard": {
-    "labels": ["type/chore"]
-  },
-  "vulnerabilityAlerts": {
-    "description": "dotfiles declares no scope/ labels and uses no scope in titles.",
-    "labels": ["type/security"],
-    "commitMessagePrefix": "fix:"
-  }
+  ]
 }
