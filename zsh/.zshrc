@@ -34,8 +34,6 @@ fi
 # Load Aliases
 if [ -f "${HOME}/.aliases.zsh" ]; then
     source "${HOME}/.aliases.zsh"
-elif [ -f "${0:A:h}/aliases.zsh" ]; then
-    source "${0:A:h}/aliases.zsh"
 fi
 
 # PATH additions

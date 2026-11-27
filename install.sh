@@ -33,6 +33,7 @@ link_file() {
 
 # 1. Shell (Zsh)
 link_file "${DOTFILES_DIR}/zsh/.zshrc" "${HOME}/.zshrc"
+link_file "${DOTFILES_DIR}/zsh/aliases.zsh" "${HOME}/.aliases.zsh"
 
 # 2. Git
 link_file "${DOTFILES_DIR}/git/.gitconfig" "${HOME}/.gitconfig"
